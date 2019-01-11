@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Welcome, you are signed in</h1>
-  <% boards.forEach(function (board) { %>
-    <h4><%= board.name %></h4>
-  <% }) %>
+  <h3>Select a board to begin tracking</h3>
+  <ul id="boards">
+    <% boards.forEach(function (board) { %>
+      <a href="/boards/<%= board.id %>">
+        <li class="board" style="<%= board.backgroundColor ? `background-color:${board.backgroundColor}` : `background:url(${board.backgroundUrl})` %>">
+          <h5><%= board.name %></h5>
+        </li>
+      </a>
+    <% }) %>
+  </ul>
 </body>
 </html>

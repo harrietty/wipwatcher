@@ -1,0 +1,22 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#boards {
+  display: flex;
+  list-style-type: none;
+}
+
+.board {
+  width: 256px;
+  height: 170px;
+  margin: 20px;
+}
+
+.board:hover {
+  opacity: 0.8;
+}
+
+a:link, a:visited, a:active {
+  color: gold;
+}
